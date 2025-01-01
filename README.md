@@ -9,7 +9,7 @@ Features -
 
 1. Create Readme
 2. Create Backend
-    a. Create backend folder. 
+    2.a. Create backend folder. 
         cd backend 
-    b. npm init 
-    c. npm install express jsonwebtoken
+    2.b. npm init 
+    2.c. npm install express jsonwebtoken
