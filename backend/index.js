@@ -8,7 +8,7 @@ app.use(express.json());
 
 app.get("/todos",async (req,res)=>{
     const todos = await todo.find({})
-    res.send("todos");
+    res.send(todos);
 })
 
 app.post("/todo",async (req,res)=>{
@@ -40,7 +40,7 @@ app.put("/completed",async (req,res)=>{
         })
         return;
     }
-    await todo.update({
+    await todo.updateOne({
         _id:req.body.id
     },{
         completed: true
