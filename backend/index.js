@@ -10,15 +10,15 @@ app.get("/todos",(req,res)=>{
 })
 
 app.post("/todo",(req,res)=>{
-    const createPayload = req.body;
-    const parsePayload = createTodo.safeParse(createPayload);
-    if(!parsePayload.success){
-        res.status(411).json({
-            msg:"Wrong Inputs"
-        })
-        return;
-    }
-    //put in db
+   const createPayload = req.body;
+   const parsedPayload = createTodo.safeParse(createPayload);
+   if(!parsedPayload.success){
+    res.status(411).json({
+        msg:"Wrong Inputs"
+    })
+    return;
+   }
+   //put in db
 })
 
 app.put("/completed",(req,res)=>{
